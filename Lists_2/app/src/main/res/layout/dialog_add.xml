@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/addItemsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:text="Add items to list"
+        android:textSize="27sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/typeOfCarsRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/addItemsTextView">
+
+        <RadioButton
+            android:id="@+id/electraRadioButton"
+            android:layout_width="wrap_content"
+            android:checked="true"
+            android:layout_height="wrap_content"
+            android:text="Electra car" />
+
+        <RadioButton
+            android:id="@+id/petrolRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petrol car" />
+
+        <RadioButton
+            android:id="@+id/hybridRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hybrid car" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/nameCarEditTex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name of car"
+        app:layout_constraintTop_toBottomOf="@id/typeOfCarsRadioGroup" />
+
+    <EditText
+        android:id="@+id/imageCarImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Image link of car"
+        app:layout_constraintTop_toBottomOf="@id/nameCarEditTex" />
+
+    <EditText
+        android:id="@+id/maxSpeedEditTex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Max speed of car"
+        app:layout_constraintTop_toBottomOf="@id/imageCarImageView" />
+
+    <EditText
+        android:id="@+id/chargingTimeEditTex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Charging time"
+        app:layout_constraintTop_toBottomOf="@id/maxSpeedEditTex" />
+
+    <EditText
+        android:id="@+id/batteryCapabilityEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Battery capability"
+        app:layout_constraintTop_toBottomOf="@id/chargingTimeEditTex" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        app:layout_constraintTop_toBottomOf="@id/batteryCapabilityEditText"
+        app:layout_constraintStart_toEndOf="@id/cancelItemButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/addItemButton"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:backgroundTint="@color/cancelButtonColor"
+        app:layout_constraintTop_toBottomOf="@id/batteryCapabilityEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/addItemButton"
+        android:id="@+id/cancelItemButton"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
